@@ -1,0 +1,6 @@
+.portfolio .portfolio-item .portfolio-item-caption {
+  transition: all .5s ease;
+  opacity: 0;
+  background-color: rgba(24,119,188,0.9);
+}
+
