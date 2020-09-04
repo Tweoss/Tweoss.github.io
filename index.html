@@ -80,10 +80,30 @@
     <section id="about" class="bg-primary text-white mb-0">
         <div class="container">
             <h2 class="text-uppercase text-center text-white" data-bs-hover-animate="pulse">About</h2><hr class="star-dark mb-5" />
-<script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
+<!-- <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
 
-<canvas class="glslCanvas" data-fragment-url="assets/shaders/example.frag" width="500" height="500"></canvas>
+<canvas class="glslCanvas" data-fragment="// Author:
+// Title:
 
+#ifdef GL_ES
+precision mediump float;
+#endif
+
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+uniform float u_time;
+
+void main() {
+    vec2 st = gl_FragCoord.xy/u_resolution.xy;
+    st.x *= u_resolution.x/u_resolution.y;
+
+    vec3 color = vec3(0.);
+    color = vec3(st.x,st.y,abs(sin(u_time)));
+    color = vec3(1.,1.,0.);
+
+    gl_FragColor = vec4(color,1.0);
+}" width="500" height="500"></canvas>
+ -->
             <div class="row">
                 <div class="col-lg-4 ml-auto">
                     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget sem a felis tempus pharetra ut ac libero. Integer sollicitudin est eget est sagittis, vitae ultricies massa tincidunt. Pellentesque at magna nunc. Sed arcu lacus, posuere
