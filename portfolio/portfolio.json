@@ -35,7 +35,7 @@
                 "img": "../media/tictactoe_board.png",
                 "img_alt": "An image of a board with x's and o's",
                 "title": "Quantum Tictactoe",
-                "description": "This implementation of Quantum TicTacToe as described by its <a style='color: #38edd9;' href='https://en.wikipedia.org/wiki/Quantum_tic-tac-toe#Gameplay'>Wikipedia page</a> is written completely in Rust with the stdweb crate. It is played on a single device with two players. The game introducess ideas such as quantum entanglement and collapse. ",
+                "description": "This implementation of Quantum TicTacToe as described by its <a style='color: #38edd9;' href='https://en.wikipedia.org/wiki/Quantum_tic-tac-toe#Gameplay'>Wikipedia page</a> is written completely in Rust with the stdweb crate. It is played on a single device with two players. The game introduces ideas such as quantum entanglement and collapse. ",
                 "link": "https://tweoss.github.io/tictactoe"
             },
             "card": {
