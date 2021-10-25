@@ -40,7 +40,7 @@ nav.nav .nav-wrapper {
 nav.nav a.nav__name {
   color: #fff;
   font-family: "Public Sans", "Reem Kufi", "Inter", Arial, sans-serif;
-  font-size: clamp(20px, 1vw, 50px);
+  font-size: clamp(20px, 1vw + 1rem, 50px);
   font-weight: 700;
 }
 
@@ -106,7 +106,7 @@ header.hero .header__content span {
 
 header.hero .header__content .hero__name {
   font-family: "Public Sans", "Reem Kufi", "Inter", Arial, sans-serif;
-  font-size: clamp(32px, 3vw, 3rem);
+  font-size: clamp(32px, 3vw + 1rem, 3rem);
   margin-bottom: 1rem;
 }
 
@@ -132,7 +132,7 @@ header.hero .header__content .hero__img {
 
 .section h2 {
   font-family: "Public Sans", "Reem Kufi", "Inter", Arial, sans-serif;
-  font-size: clamp(28px, 2vw, 2rem);
+  font-size: clamp(28px, 2vw + 1rem, 2rem);
   color: #fff;
   margin-bottom: 3rem;
 }

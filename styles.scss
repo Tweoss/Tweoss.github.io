@@ -56,7 +56,7 @@ nav.nav {
     a.nav__name {
         color: $txt-clr-heading;
         font-family: $font-heading;
-        font-size: clamp(20px, 1vw, 50px);
+        font-size: clamp(20px, unquote("1vw + 1rem"), 50px);
         font-weight: 700;
     }
     ul.nav__links {
@@ -101,7 +101,7 @@ header.hero {
         }
         .hero__name {
             font-family: $font-heading;
-            font-size: clamp(32px, 3vw, 3rem);
+            font-size: clamp(32px, unquote("3vw + 1rem"), 3rem);
             margin-bottom: 1rem;
         }
         .hero__text {
@@ -125,7 +125,7 @@ header.hero {
     height: max-content;
     h2 {
         font-family: $font-heading;
-        font-size: clamp(28px, 2vw, 2rem);
+        font-size: clamp(28px, unquote("2vw + 1rem"), 2rem);
         color: $txt-clr-heading;
         margin-bottom: 3rem;
     }
