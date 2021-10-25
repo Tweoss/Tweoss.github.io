@@ -1,0 +1,64 @@
+{
+    "col_1": [{
+            "modal": {
+                "img": "../media/three_body.png",
+                "img_alt": "Image with three dots on a grid",
+                "title": "The Three Body Problem",
+                "description": "The Three Body Problem is famous for its unsolvable nature. No one has or will solve the n-body problem for more than three bodies. (The general differential equations are not analytically solvable.) However, we can make a numerical approximation. This simulation allows for multiple bodies with different starting position and velocities and varying masses. It includes a tracking feature based on the distribution of mass. Try finding a stable solution (it's really difficult)!",
+                "link": "https://tweoss.github.io/3body"
+            },
+            "card": {
+                "img": "../media/three_body.png",
+                "img_alt": "Image with three dots on a grid",
+                "title": "Three Body Problem",
+                "description": "Simulator for n bodies"
+            }
+        },
+        {
+            "modal": {
+                "img": "../media/wasm_render.png",
+                "img_alt": "Image with projection of three squares",
+                "title": "WebAssembly Rasterization",
+                "description": "The image shows three squares under perspective projection. The projection and rasterization are written in WebAssembly. Between JavaScript and WebAssembly, there are three memory operations per pixel (writing to memory, copying to an ImageData buffer, and copying to canvas). Large displays seem to show a significant drop in FPS.",
+                "link": "https://tweoss.github.io/wasm"
+            },
+            "card": {
+                "img": "../media/wasm_render.png",
+                "img_alt": "Image with projection of three squares",
+                "title": "3d Projection",
+                "description": "Handcoded WebAssembly for 3d projection"
+            }
+        }
+    ],
+    "col_2": [{
+            "modal": {
+                "img": "../media/tictactoe_board.png",
+                "img_alt": "An image of a board with x's and o's",
+                "title": "Quantum Tictactoe",
+                "description": "This implementation of Quantum TicTacToe as described by its <a style='color: #38edd9;' href='https://en.wikipedia.org/wiki/Quantum_tic-tac-toe#Gameplay'>Wikipedia page</a> is written completely in Rust with the stdweb crate. It is played on a single device with two players. The game introducess ideas such as quantum entanglement and collapse. ",
+                "link": "https://tweoss.github.io/tictactoe"
+            },
+            "card": {
+                "img": "../media/tictactoe_board.png",
+                "img_alt": "An image of a board with x's and o's",
+                "title": "Quantum Tictactoe",
+                "description": "Two player quantum tictactoe"
+            }
+        },
+        {
+            "modal": {
+                "img": "../media/voronoi_leaves.png",
+                "img_alt": "Image of leaves with dots",
+                "title": "Voronoi Stippler",
+                "description": "Stippling, like hatching, is an artistic technique that uses small variations in a pattern to render images. Stippling uses small circles with varying position and diameter to produce the image, sometimes with variation in color. This implementation is adapted from Mike Bostock's <a style='color: #38edd9' href='https://observablehq.com/@mbostock/voronoi-stippling'>Voronoi Stippling</a> on Observable HQ, which uses Lloyd's Relaxation. Changes include converting from Observable's notebook to vanilla JavaScript, color weighting for the calculation of Voronoi Diagrams, and variable-width color stippling.",
+                "link": "https://tweoss.github.io/voronoi"
+            },
+            "card": {
+                "img": "../media/voronoi_party.png",
+                "img_alt": "Image of lights with dots",
+                "title": "Voronoi Stippling",
+                "description": "Javascript stippler"
+            }
+        }
+    ]
+}
