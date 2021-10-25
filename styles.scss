@@ -33,6 +33,12 @@ html {
     background: $clr-bg;
 }
 
+body.no-scroll {
+    overflow: hidden;
+    // position: fixed;
+    overflow-y: scroll
+}
+
 // #region Navigation
 nav.nav {
     padding: 1.5rem 0;
@@ -96,7 +102,7 @@ header.hero {
         }
         .hero__name {
             font-family: $font-heading;
-            font-size: clamp(32px, 3vw + 1rem, 3rem);
+            font-size: clamp(32px, 3vw, 3rem);
             margin-bottom: 1rem;
         }
         .hero__text {
@@ -120,7 +126,7 @@ header.hero {
     height: max-content;
     h2 {
         font-family: $font-heading;
-        font-size: clamp(28px, 2vw + 1rem, 2rem);
+        font-size: clamp(28px, 2vw, 2rem);
         color: $txt-clr-heading;
         margin-bottom: 3rem;
     }
