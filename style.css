@@ -63,8 +63,13 @@ a {
     transition: color 0.2s ease;
 }
 
+footer {
+    padding-bottom: 1.5rem;
+}
+
 footer p {
     text-align: center;
+    transition: color 0.2s ease;
 }
 
 .card-flex {
