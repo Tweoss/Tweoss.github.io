@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100..900&family=Quicksand:wght@300..700&family=Work+Sans:wght@100..900&display=swap");
+body,
+html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #edfaff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    transition: background 0.2s ease;
+}
+
+#wrapper {
+    width: 65%;
+    padding-top: 125px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: "Work Sans", serif;
+    font-size: clamp(2rem, 3rem + 1vw, 4rem);
+    font-weight: 700;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+img.header_pic {
+    width: clamp(200px, 75%, 400px);
+    margin: 75px auto 0 auto;
+    display: block;
+}
+
+h2 {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: clamp(1.3rem, 1.3rem + 1vw, 2.5rem);
+    text-align: center;
+    margin-top: 150px;
+    line-height: 1;
+    margin-bottom: 75px;
+}
+
+p {
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    max-width: 85%;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+a {
+    color: #00587f;
+    transition: color 0.2s ease;
+}
+
+footer p {
+    text-align: center;
+}
+
+.card-flex {
+    /* background: blue; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-bottom: 100px;
+    flex-wrap: wrap;
+    gap: 1rem 0;
+}
+
+.card-flex .col {
+    width: calc(50% - 0.5rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card {
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 7px;
+    box-shadow: 0.2px 0.2px 2.5px rgba(0, 0, 0, 0.016), 0.4px 0.4px 6.4px rgba(0, 0, 0, 0.022), 0.9px 0.9px 13.1px rgba(0, 0, 0, 0.028), 1.8px 1.8px 27px rgba(0, 0, 0, 0.034), 5px 5px 74px rgba(0, 0, 0, 0.05);
+    height: max-content;
+}
+
+.card img {
+    border-radius: 3px;
+    width: 100%;
+    max-height: 35vh;
+    object-fit: cover;
+    transition: filter 0.2s ease;
+}
+
+.card img~.card_wrapper {
+    padding: 25px 25px 0 25px;
+}
+
+.card_wrapper {
+    padding: 25px;
+}
+
+.card_title {
+    font-family: "Work Sans", serif;
+    font-size: 1.75rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.card_content {
+    max-width: 100%;
+    text-align: left;
+    margin-top: 15px;
+    transition: color 0.2s ease;
+}
+
+.card_buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.card_buttons.wrap {
+    flex-direction: column;
+}
+
+.card_button {
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+    font-family: "Libre Franklin", sans-serif;
+    border: 0;
+    border-radius: 7px;
+    background: #a9e5ff;
+    font-weight: 500;
+    font-size: 1rem;
+    text-overflow: clip;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background 0.2s ease, filter 0.2s ease, color 0.2s ease, border 0.2s ease;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+}
+
+.card_button:hover {
+    filter: brightness(95%);
+}
+
+.card_button.site {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background: transparent;
+    filter: none;
+}
+
+.card_button.site:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.card_button i {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+button.toggleTheme {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    border: 0;
+    background: #a9e5ff;
+    color: #000;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background 0.2s ease, filter 0.2s ease;
+}
+
+button.toggleTheme:hover {
+    filter: brightness(95%);
+}
+
+@media (max-width: 1050px) {
+    #wrapper {
+        width: calc(100% - 70px);
+    }
+    h1 {
+        font-size: clamp(2rem, 2rem + 2vw, 4rem);
+    }
+    h2 {
+        font-size: clamp(1.75rem, 1.75rem + 1vw, 3.2rem);
+    }
+}
+
+@media (max-width: 800px) {
+    .card-flex {
+        flex-direction: column;
+    }
+    .card-flex .col {
+        width: 100%;
+    }
+    p {
+        text-align: left;
+        max-width: 100%;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body:not(.light-override),
+    html:not(.light-override) {
+        background: #0e1116;
+    }
+    h1:not(.light-override),
+    h2:not(.light-override),
+    p:not(.light-override) {
+        color: #ddd;
+    }
+    .card:not(.light-override) {
+        background: #222;
+    }
+    a:not(.light-override) {
+        color: #a9e5ff;
+    }
+    .card img:not(.light-override) {
+        filter: brightness(85%);
+    }
+    .card img:not(.light-override):hover {
+        filter: brightness(100%);
+    }
+    .card_title:not(.light-override) {
+        color: #ddd;
+    }
+    .card_button:not(.light-override):not(.site) {
+        background: #00587f;
+        color: #ddd;
+    }
+    .card_button.site:not(.light-override) {
+        color: #ddd;
+    }
+    .card_button.site:not(.light-override) {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .card_button:not(.light-override):hover {
+        background: #006a99;
+    }
+    .card_button.site:not(.light-override):hover {
+        background: rgba(255, 255, 255, 0.05);
+    }
+    button.toggleTheme:not(.light-override) {
+        background: #00587f;
+        color: #fff;
+    }
+    button.toggleTheme:not(.light-override):hover {
+        background: #006a99;
+    }
+}
+
+
+/* Dark overrides */
+
+body.dark-override,
+html.dark-override {
+    background: #0e1116;
+}
+
+h1.dark-override,
+h2.dark-override,
+p.dark-override {
+    color: #ddd;
+}
+
+.card.dark-override {
+    background: #222;
+}
+
+a.dark-override {
+    color: #a9e5ff;
+}
+
+.card_title.dark-override {
+    color: #ddd;
+}
+
+.card_button.dark-override {
+    background: #00587f;
+    color: #ddd;
+}
+
+.card_button.dark-override:hover {
+    background: #006a99;
+}
+
+.card_button.site.dark-override:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+button.toggleTheme.dark-override {
+    background: #00587f;
+    color: #fff;
+}
+
+button.toggleTheme:hover.dark-override {
+    background: #006a99;
+}
+
+.card_button.dark-override.site {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent !important;
+}
+
+.card_button i {
+    transition: all 0s linear !important;
+}

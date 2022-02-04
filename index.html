@@ -5,71 +5,107 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" type="text/css">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favocon/favicon-16x16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favocon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/favocon/favicon-96x96.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favocon/apple-touch-icon.png" />
-    <link rel="manifest" href="/favocon/site.webmanifest" />
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>Tweoss</title>
 </head>
 
 <body>
-    <nav class="nav">
-        <div class="nav-wrapper">
-            <a href="#" class="nav__name">TWEOSS</a>
-            <ul class="nav__links">
-                <li><a href="#" class="nav__link-highlight">About</a></li>
-                <li><a href="portfolio/">Portfolio</a></li>
-            </ul>
-        </div>
-    </nav>
-    <header class="hero">
-        <div class="header__content">
-            <span>
-                <h1 class="hero__name">Francis Chua</h1>
-                <div class="hero__text">Lorem ipsum dolor sit.</div>
-            </span>
-            <img src="media/header.png" alt="Francis Chua" class="hero__img">
-        </div>
-    </header>
-    <section class="section">
-        <h2>Lorem Ipsum</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque corporis culpa reiciendis odio atque exercitationem ad rem repellendus modi? Accusantium iste necessitatibus neque. Excepturi sequi harum alias quos, cumque labore odio ullam magni facere
-            vitae architecto in voluptatem amet neque natus dolores, error quaerat, dolorem omnis assumenda blanditiis consequatur nulla. Odio maiores nostrum delectus id corporis recusandae quos fugit, culpa aliquam distinctio atque, deleniti praesentium
-            error eligendi assumenda eius vel possimus illo reprehenderit! Ut dignissimos eos vel animi nisi quibusdam autem magni commodi harum, sunt, doloremque nihil molestias. Nam dolorum ipsam perspiciatis est cupiditate temporibus unde ad! Facere,
-            porro voluptates.
+    <div id="wrapper">
+        <h1>Francis Chua</h1>
+        <img src="media/header.png" alt="Francis Chua" class="header_pic" />
+        <h2>About Me</h2>
+        <p>I'm currently a high school senior who also happens to be a Rust enthusiast, though I have experience in Golang (Open Networking Foundation, summer of 2021), Node.js, Javascript, WebAssembly, C++, and C.
         </p>
-    </section>
-    <section class="section section--hasImage">
-        <span>
-            <h2>Lorem Ipsum</h2>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste amet placeat quae ab debitis doloremque,
-                quibusdam ratione et qui pariatur. Quia magni dolorum quasi eveniet porro repellendus explicabo, ipsa
-                nesciunt sapiente modi corporis soluta tenetur, reprehenderit rerum incidunt sunt eaque odio deleniti
-                mollitia dolor tempore ipsum voluptate cumque aliquam. Et, impedit blanditiis fuga dolorum laudantium
-                facilis quae iusto esse quo vero facere. Quasi voluptas labore hic laboriosam optio! Mollitia possimus,
-                fugiat aperiam quasi aspernatur similique! Repellendus fuga cum iure aliquid, qui harum ipsam illum
-                velit minima doloremque voluptatem? Animi assumenda ullam labore perspiciatis enim odit minus dicta
-                obcaecati saepe pariatur!
-            </p>
-        </span>
-        <img src="media/header.png" alt="Random">
-    </section>
-    <section class="section">
-        <h2>Lorem Ipsum</h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At dolorem tempora, magni molestiae quae fugit ratione alias nemo corporis soluta facere provident qui accusantium id vero laborum sequi impedit explicabo modi. Cumque ipsam animi vel, mollitia
-            ratione eveniet rerum, at vero explicabo reprehenderit inventore. Non accusamus nihil veniam ad, odio nemo necessitatibus beatae, aliquid perferendis cumque vitae, recusandae esse eligendi ut delectus sit dicta itaque debitis omnis perspiciatis?
-            Quod dolorem et praesentium voluptas dicta tempore exercitationem aliquam dolorum blanditiis, quo doloremque aperiam aspernatur consectetur asperiores fuga ea illo possimus accusantium earum recusandae adipisci. Corporis deserunt hic illum
-            consequatur, itaque consectetur!
+        <br>
+        <p>I'm interested in the interesection of computer science and other fields, namely economics, music, and mathematics. I also find cryptography to be an immediately relevant application of computer science and math. My ideals are interactivity, speed,
+            and transparancy.
         </p>
-    </section>
-    <footer class="footer">
-        <p>Website designed by <a href="http://isaacmaddox.net">Isaac Maddox</a></p>
+        <h2>Projects</h2>
+        <div class="card-flex">
+            <div class="col">
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+    <button class="toggleTheme" onclick="changeTheme()">
+        <i class="fas fa-adjust"></i>
+    </button>
+    <footer>
+        <p>Website design by <a href="http://isaacmaddox.net/">Isaac Maddox</a></p>
     </footer>
+    <script>
+        let theme = "light";
+        $(document).ready(() => {
+            $(".card_buttons").removeClass('wrap');
+            $(".card_button").each(function() {
+                $(this).html("<span>" + $(this).html() + "</span>");
+                if ($(this).children("span").width() > $(this).width()) {
+                    $(".card_buttons").addClass('wrap');
+                }
+            });
+
+            // Set theme initially in order to make toggle theme button work
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                theme = "dark";
+            }
+        });
+
+        $(window).resize(() => {
+            $(".card_buttons").removeClass('wrap');
+            $(".card_button").each(function() {
+                $(this).html("<span>" + $(this).html() + "</span>");
+                if ($(this).children("span").width() > $(this).width()) {
+                    $(".card_buttons").addClass('wrap');
+                }
+            });
+        });
+
+        // set default color based on preferences when preferences change
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            theme = event.matches ? "dark" : "light";
+            changeTheme();
+        });
+
+        function changeTheme() {
+            if (theme == "dark") {
+                $("*, *  *").removeClass('dark-override').addClass('light-override');
+                theme = "light";
+            } else {
+                $("*, *  *").removeClass('light-override').removeClass('dark-override');
+                theme = "dark";
+            }
+        }
+        $(document).ready(function() {
+            // fetch portfolio.json
+            $.getJSON("./media/portfolio.json", (data) => {
+                // function to append each card and modal to the DOM
+                let apply = (col_num, col_data) => {
+                    $.each(col_data, function(i, item) {
+                        const info = item.info;
+                        $(`.card-flex .col:nth-child(${col_num})`).append(`
+                            <div class="card">
+                                ${info.hasOwnProperty("img") ? '<img src="media/' + info.img.url + '" alt="' + info.img.alt + '" class="card_img" />' : ""}
+                                <div class="card_wrapper">
+                                    <div class="card_title">${info.name}</div>
+                                    <p class="card_content">${info.description}</p>
+                                    <div class="card_buttons">
+                                        ${info.hasOwnProperty("repo_link") ? '<a class="card_button repo" href="' + info.repo_link + '" target="_blank"><i class="fas fa-external-link-alt"></i> View Repo</a>' : ""}
+                                        ${info.hasOwnProperty("website_link") ? '<a class="card_button site" href="' + info.website_link + '" target="_blank"><i class="far fa-globe"></i>Website</a>' : ""}
+                                    </div>
+                                </div>
+                            </div>
+                        `);
+                    });
+                };
+                // apply data to DOM
+                apply(1, data.col1);
+                apply(2, data.col2);
+            })
+        })
+    </script>
 </body>
 
 </html>
