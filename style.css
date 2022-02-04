@@ -184,7 +184,7 @@ button.toggleTheme {
     right: 1rem;
     font-size: 1.3rem;
     cursor: pointer;
-    transition: background 0.2s ease, filter 0.2s ease;
+    transition: background 0.2s ease, filter 0.2s ease, color 0.2s ease;
 }
 
 button.toggleTheme:hover {
@@ -213,6 +213,9 @@ button.toggleTheme:hover {
     p {
         text-align: left;
         max-width: 100%;
+    }
+    .card-wrapper {
+        padding: 25px 0px 0px 0px !important;
     }
 }
 
