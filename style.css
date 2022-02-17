@@ -296,6 +296,10 @@ a.dark-override {
     color: #a9e5ff;
 }
 
+.card img.card.dark-override {
+    filter: brightness(85%);
+}
+
 .card_title.dark-override {
     color: #ddd;
 }
